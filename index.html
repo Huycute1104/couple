@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Album</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .photo-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .photo {
+            position: relative;
+        }
+
+        .photo img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .photo video {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .photo .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            color: gray;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>내 앨범</h1>
+            <p>* SNS공유는 사진을 클릭하세요.<br>* 한번에 내려받기를 이용하세요.</p>
+        </div>
+
+        <div class="photo-grid">
+            <div class="photo">
+                <video src="img/video1.mp4" controls></video>
+            </div>
+            <div class="photo">
+                <video src="img/video1.mp4" controls></video>
+            </div>
+            <div class="photo">
+                <img src="img/photo2.jpg" alt="Photo 2">
+            </div>
+            <div class="photo">
+                <img src="img/photo3.jpg" alt="Photo 3">
+            </div>
+            <div class="photo">
+                <img src="img/photo4.jpg" alt="Photo 4">
+            </div>
+            <div class="photo">
+                <img src="img/photo5.jpg" alt="Photo 5">
+            </div>
+            <div class="photo">
+                <img src="img/photo6.jpg" alt="Photo 6">
+            </div>
+            <div class="photo">
+                <img src="img/photo7.jpg" alt="Photo 6">
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>포토슬레이트 - 2024-12-26</p>
+        </div>
+    </div>
+</body>
+</html>
